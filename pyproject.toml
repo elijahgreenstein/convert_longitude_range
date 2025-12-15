@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools >= 72.1.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "convert_longitude_range"
+version = "0.1.0"
+authors = [ { name="Elijah Greenstein" } ]
+description = "Tool to convert GeoPandas polygons between longitude range [-180, 180] and [0, 360]."
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+  "geopandas",
+  "shapely",
+]
+
+[project.scripts]
+convert_long360 = "convert_long:__main__.main"
