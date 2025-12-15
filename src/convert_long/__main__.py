@@ -10,12 +10,12 @@ from convert_long import convert360
 
 
 def main() -> None:
-    "Parse command line arguments and execute."""
+    "Parse command line arguments and execute." ""
 
     parser = argparse.ArgumentParser(
-            prog="Convert Longitude Range",
-            description="Convert polygons in input file from longitude range [-180, 180] to [0, 360]; write result to output path.",
-            )
+        prog="Convert Longitude Range",
+        description="Convert polygons in input file from longitude range [-180, 180] to [0, 360]; write result to output path.",
+    )
     parser.add_argument("input")
     parser.add_argument("output")
     args = parser.parse_args()
