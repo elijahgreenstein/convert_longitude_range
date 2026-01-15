@@ -58,8 +58,7 @@ def convert_polygon(polygon: Polygon) -> Polygon:
     """
     new_pts = []
     for pt in polygon.exterior.coords:
-        new_x = pt[0] % 360.0 if pt[0] < 0.0 else 360.0
-        new_pts.append((new_x, pt[1]))
+        new_pts.append((pt[0] + 360.0, pt[1]))
     return Polygon(new_pts)
 
 
